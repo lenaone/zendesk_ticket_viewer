@@ -1,0 +1,5 @@
+<ul>
+  <% @tickets.each do |ticket| %>
+   <li>Ticket id :<a href="/tickets/<%= ticket.id %>"><%= ticket.id %></a>, subject :<%= ticket.subject %></li>
+  <% end %>
+</ul>
