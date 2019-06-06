@@ -4,10 +4,10 @@ require 'httparty'
 require 'byebug'
 require_relative 'models/ticket'
 
-
-
 get '/tickets' do
-  @tickets = Ticket.all
+  tickets = Ticket.fetch_tickets(page: params[:page])
+  @tickets = tickets["tickets"] 
+  @total = tickets["total"] 
   erb :index
 end
 
