@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra/reloader'
 gem 'httparty'
 gem 'minitest'
-gem 'rack-test'
 gem 'mocha'
+gem 'rack-test'
+gem 'rubocop', require: false
+gem 'sinatra'
+gem 'sinatra/reloader'

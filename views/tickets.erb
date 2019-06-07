@@ -1,7 +1,7 @@
 <% if @error.nil? %>
   <ul>
     <% @tickets.each do |ticket| %>
-    <li>Ticket id :<a href="/tickets/<%= ticket.id %>"><%= ticket.id %></a>, subject :<%= ticket.subject %></li>
+    <li>ID :<a href="/tickets/<%= ticket.id %>"><%= ticket.id %></a>, subject :<%= ticket.subject %></li>
     <% end %>
   </ul>
 

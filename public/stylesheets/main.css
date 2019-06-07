@@ -8,7 +8,7 @@ ul {
   border-radius: 20px;
   width: 40%;
   text-align: center;
-  list-style-position: inside;
+  list-style:outside none none;
   box-shadow: 5px 10px #888888
 }
 
@@ -27,7 +27,7 @@ li {
 }
 
 h4 {
-  padding: 45px;
+  padding: 35px;
 }
 
 .error-info {
