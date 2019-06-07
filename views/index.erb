@@ -15,13 +15,15 @@
     </a>
     <a href="/tickets?page=<%= @next_page %>">
       <%= @next_page %> 
-    </a> 
-    <a href="/tickets?page=<%= @last_page %>">&raquo;</a> 
+    </a>
+    <a href="/tickets?page=<%= @last_page %>">&raquo;</a>
   </div>
 <% end %>
 
 <% if !@error.nil? %>
-  <h4>Tickets: <%= @tickets %></h4>
-  <h4>Total: <%= @total %></h4>
-  <h4>Error: <%= @error %></h4>
+  <div class="error-info">
+    <h3>Tickets: <%= @tickets %></h3>
+    <h3>Total: <%= @total %></h3>
+    <h3>Error: <%= @error %></h3>
+  </div>
 <% end %>

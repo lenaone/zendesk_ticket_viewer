@@ -1,0 +1,54 @@
+.title {
+  text-align: center;
+}
+
+ul {
+  margin-left: 28%;
+  border: 3px double black;
+  border-radius: 20px;
+  width: 40%;
+  text-align: center;
+  list-style-position: inside;
+  box-shadow: 5px 10px #888888
+}
+
+li {
+  padding: 5px;
+}
+
+.ticket-info {
+  border: 3px double black;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: 100px auto;
+  box-shadow: 5px 10px #888888
+}
+
+h4 {
+  padding: 45px;
+}
+
+.error-info {
+  border: 3px double black;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: 100px auto;
+  box-shadow: 5px 10px #888888
+}
+
+h3 {
+  padding-top: 45px;
+}
+
+.pagination a:hover, .active {
+  background-color: #428BCA;
+}
+
+.pagination, p {
+  padding-top: 20px;
+  text-align: center;
+}
