@@ -1,5 +1,4 @@
 require 'httparty'
-require 'byebug'
 
 class Ticket
 
@@ -16,13 +15,17 @@ class Ticket
   # fetch tickets with api, send data as hash
   def self.fetch_tickets(page: 1, per_page: 25)
     response = HTTParty.get("#{TICKET_API_URL}?page=#{page}&per_page=#{per_page}", :basic_auth => AUTH)
-    tickets = response["tickets"].map do |ticket|
-      Ticket.new(ticket)
-    end
+    if response.code == 404 || response.code == 401
+      {"tickets" => [], "total" => 0, "error_message" => response["error"]}
+    else
+      tickets = response["tickets"].map do |ticket|
+        Ticket.new(ticket)
+      end
     {
       "tickets" => tickets,
       "total" => response["count"]
     }
+    end
   end
   
   # generate all tickets
@@ -31,18 +34,15 @@ class Ticket
     response = fetch_tickets(page: page, per_page: 100)
     count = response["total"]
     tickets = response["tickets"]
-
     while count > tickets.count do
       page += 1
       tickets << fetch_tickets(page: page, per_page: 100)["tickets"]
     end
     tickets.flatten
-
   end
 
   # generate a ticket
   def self.find(number)
-    
     all.find {|each_ticket| each_ticket.id == number }
   end
 
