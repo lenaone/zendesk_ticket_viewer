@@ -27,12 +27,22 @@ class Ticket
   
   # generate all tickets
   def self.all
-    tickets = fetch_tickets(page: 1, per_page: 25)
-    tickets["tickets"]
+    page = 1
+    response = fetch_tickets(page: page, per_page: 100)
+    count = response["total"]
+    tickets = response["tickets"]
+
+    while count > tickets.count do
+      page += 1
+      tickets << fetch_tickets(page: page, per_page: 100)["tickets"]
+    end
+    tickets.flatten
+
   end
 
   # generate a ticket
   def self.find(number)
+    
     all.find {|each_ticket| each_ticket.id == number }
   end
 

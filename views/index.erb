@@ -1,5 +1,20 @@
 <ul>
   <% @tickets.each do |ticket| %>
+  
    <li>Ticket id :<a href="/tickets/<%= ticket.id %>"><%= ticket.id %></a>, subject :<%= ticket.subject %></li>
   <% end %>
 </ul>
+
+<div class="pagination">
+  <a href="/tickets?page=<%= @first_page %>">&laquo;</a>
+  <a href="/tickets?page=<%= @previous_page %>">
+    <%= @previous_page %>
+  </a>
+  <a href="/tickets?page=<%= @current_page %>">
+    <%= @current_page %>
+  </a>
+  <a href="/tickets?page=<%= @next_page %>">
+    <%= @next_page %> 
+  </a> 
+  <a href="/tickets?page=<%= @last_page %>">&raquo;</a> 
+</div>
