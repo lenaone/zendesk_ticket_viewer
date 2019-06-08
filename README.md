@@ -15,9 +15,11 @@ returned
 
 1. Make sure you have Ruby 2.5 installed in your machine.
 
-2. `git clone https://github.com/lenaone/zendesk_ticket_viewer.git`
+2. clone this repository: `git clone https://github.com/lenaone/zendesk_ticket_viewer.git`
 
-3. `bundle install`
+3. Change to the app directory: `cd zendesk_ticket_viewer`
+
+4. Install the gems: `bundle install`
 
 ### Running to app:
 
@@ -31,7 +33,7 @@ Open url in your browser: `http://localhost:4567`
 
 ## APPROACH
 
-- I decide to do sinata app with ticket model containing all the logics and display tickets on the webpage.
+- I decided to do sinata app with ticket model containing all the logics and display tickets on the webpage.
   1. Downloaded sinata and designed a Ticket class in models folder.
   2. Get the data from API, so I use the httparty method get data.
   3. Display on the webpage. 
