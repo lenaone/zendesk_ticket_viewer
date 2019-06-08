@@ -37,7 +37,7 @@ Open url in your browser: `http://localhost:4567`
   1. Downloaded sinata and designed a Ticket class in models folder.
   2. Get the data from API, so I use the httparty method get data.
   3. Display on the webpage. 
-  4. Main page is `http://localhost:4567/tickets` therefore, genereate 25 tickets in a page.
+  4. Main page is `http://localhost:4567/tickets` displaying 25 tickets per page.
   5. If a user would like to check individual ticket, click ticket number and go to individual ticket page.
   ```
     For example
