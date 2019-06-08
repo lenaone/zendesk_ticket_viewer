@@ -1,8 +1,13 @@
+body {
+  background-color: mistyrose;
+}
+
 .title {
   text-align: center;
 }
 
 ul {
+  background-color: white;
   margin-left: 28%;
   border: 3px double black;
   border-radius: 20px;
@@ -17,6 +22,7 @@ li {
 }
 
 .ticket-info {
+  background-color: white;
   border: 3px double black;
   border-radius: 20px;
   width: 400px;
@@ -31,6 +37,7 @@ h4 {
 }
 
 .error-info {
+  background-color: white;
   border: 3px double black;
   border-radius: 20px;
   width: 400px;
@@ -51,4 +58,10 @@ h3 {
 .pagination, p {
   padding-top: 20px;
   text-align: center;
+  font-size: 17px;
+}
+
+.pagination a {
+  text-decoration:none !important;
+  font-size: 30px;
 }

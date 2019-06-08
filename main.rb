@@ -5,6 +5,10 @@ require 'sinatra/reloader'
 require 'httparty'
 require_relative 'models/ticket'
 
+get '/' do
+  redirect '/tickets'
+end
+
 get '/tickets' do
   tickets = Ticket.fetch_tickets(page: params[:page])
   @tickets = tickets['tickets']
@@ -17,7 +21,7 @@ get '/tickets' do
   @current_page = params[:page].nil? ? @first_page : params[:page].to_i
   @previous_page = @current_page - 1 if @current_page != @first_page
   @next_page = @current_page + 1 if @current_page != @last_page
-  erb :index
+  erb :tickets
 end
 
 get '/tickets/:id' do

@@ -2,10 +2,11 @@
 
 source 'https://rubygems.org'
 
+gem 'sinatra'
 gem 'httparty'
 gem 'minitest'
 gem 'mocha'
 gem 'rack-test'
 gem 'rubocop', require: false
-gem 'sinatra'
-gem 'sinatra/reloader'
+
+
